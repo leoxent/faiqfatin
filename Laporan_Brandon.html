@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Laporan Brandon: Faiq &amp; Fatin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f2fb;--panel:#fff;--ink:#1d1a2e;--mute:#6a6683;--line:#dcd8ee;--f:#d6336c;--m:#2f6fdd;--ok:#1f9d6b;--bad:#d9480f;--warn:#b7791f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14121e;--panel:#1d1a2c;--ink:#f0eefb;--mute:#a09cbd;--line:#322e4a;--f:#f06595;--m:#5c9bff;--ok:#38d39f;--bad:#ff8a5b;--warn:#f2c14e}}
+:root[data-theme="dark"]{--bg:#14121e;--panel:#1d1a2c;--ink:#f0eefb;--mute:#a09cbd;--line:#322e4a;--f:#f06595;--m:#5c9bff;--ok:#38d39f;--bad:#ff8a5b;--warn:#f2c14e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 56px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Bricolage Grotesque",system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:0 20px 80px}
+h1,h2,h3{line-height:1.1;margin:0}
+.hero{padding:56px 0 28px}
+.hero h1{font-size:clamp(40px,10vw,84px);font-weight:800;letter-spacing:-.03em}
+.hero h1 .f{color:var(--f)}.hero h1 .m{color:var(--m)}
+.hero p{max-width:60ch;color:var(--mute);margin:16px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:15px}
+.chip b{font-size:19px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:8px 0;display:flex;gap:6px;overflow-x:auto;border-bottom:1px solid var(--line)}
+nav a{white-space:nowrap;text-decoration:none;color:var(--mute);padding:6px 12px;border-radius:8px;font-size:15px}
+nav a:hover,nav a:focus-visible{background:var(--panel);color:var(--ink);outline:2px solid var(--m)}
+section{padding:48px 0 0}
+h2{font-size:clamp(28px,6vw,42px);font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+.sub{color:var(--mute);margin:0 0 24px;max-width:62ch}
+.legend{display:flex;gap:18px;font-size:15px;margin-bottom:14px;color:var(--mute)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.take{background:var(--panel);border-left:6px solid var(--m);border-radius:4px 16px 16px 4px;padding:16px 20px;margin:0 0 16px}
+.take.f{border-color:var(--f)}.take.w{border-color:var(--warn)}
+.take h3{font-size:20px;margin-bottom:6px}
+.take p{margin:0}
+.dm{margin:0 0 22px}
+.dm .t{display:flex;justify-content:space-between;gap:12px;font-weight:600;margin-bottom:6px}
+.dm .t span:last-child{color:var(--mute);font-weight:400;font-size:14px;text-align:right}
+.bar{display:flex;height:34px;border-radius:10px;overflow:hidden;background:var(--line);gap:3px}
+.bar>div{display:flex;align-items:center;color:#fff;font-weight:600;font-size:15px;width:0;transition:width 1.1s cubic-bezier(.2,.8,.2,1);padding:0 10px;white-space:nowrap}
+.bar>div.f{background:var(--f);justify-content:flex-start}
+.bar>div.m{background:var(--m);justify-content:flex-end}
+.g{margin:0 0 22px}
+.g .t{display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px}
+.track{height:14px;border-radius:8px;background:var(--line);overflow:hidden}
+.track>div{height:100%;width:0;border-radius:8px;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+.g .n{font-size:14px;color:var(--mute);margin-top:6px}
+.chart{display:flex;align-items:flex-end;gap:4px;height:150px;margin:8px 0 4px;padding-bottom:2px;border-bottom:2px solid var(--line)}
+.chart div{flex:1;border-radius:4px 4px 0 0;background:var(--m);height:0;transition:height 1s ease;min-width:0}
+.chart.c div{background:var(--warn)}
+.chart div.hot{background:var(--bad)}
+.axis{display:flex;gap:4px;font-size:11px;color:var(--mute);text-align:center}
+.axis span{flex:1}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.col h3{font-size:26px;margin-bottom:14px}
+.col.ok h3{color:var(--ok)}.col.bad h3{color:var(--bad)}
+.fl{border-top:1px solid var(--line);padding:12px 0}
+.fl b{display:block;font-size:17px}
+.fl .who{display:inline-block;font-size:13px;font-weight:600;padding:1px 9px;border-radius:999px;color:#fff;margin-bottom:4px}
+.who.f{background:var(--f)}.who.m{background:var(--m)}
+.fl p{margin:2px 0 0;font-size:15px;color:var(--mute)}
+.rs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.rs>div{padding:20px;border-radius:18px;background:var(--panel)}
+.rs h3{margin-bottom:10px;font-size:24px}
+.ri{border-top:1px solid var(--line);padding:10px 0}
+.ri .pr{display:inline-block;font-size:12.5px;font-weight:600;color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:0 9px;margin-bottom:3px}
+.ri p{margin:0;font-size:15.5px}
+.label{font-size:clamp(28px,6vw,46px);font-weight:800;letter-spacing:-.02em;margin:10px 0 12px;line-height:1.1}
+.rule{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:16px 0;border-top:1px solid var(--line)}
+.rule .no{font-size:40px;font-weight:800;color:var(--warn);line-height:1}
+.rule b{display:block;font-size:19px}
+.rule p{margin:3px 0 0;color:var(--mute)}
+.foot{margin-top:56px;padding:18px 20px;border-radius:14px;background:var(--panel);font-size:14px;color:var(--mute)}
+@media (max-width:680px){.cols,.rs{grid-template-columns:1fr}body{font-size:16px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.hs{display:flex;align-items:flex-end;gap:6px;height:130px;margin:10px 0 4px;border-bottom:2px solid var(--line)}
+.hs div{flex:1;border-radius:6px 6px 0 0;background:var(--warn);height:0;transition:height 1s ease}
+.hs div.hot{background:var(--bad)}
+.hsx{display:flex;gap:6px;font-size:11px;color:var(--mute);text-align:center}
+.hsx span{flex:1}
+details.fg{border-top:1px solid var(--line);padding:14px 0}
+details.fg:last-of-type{border-bottom:1px solid var(--line)}
+details.fg summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:104px 1fr auto;gap:12px;align-items:center}
+details.fg summary::-webkit-details-marker{display:none}
+details.fg summary:focus-visible{outline:2px solid var(--m);outline-offset:4px;border-radius:6px}
+.fg .dt{font-weight:800}
+.fg .tt{font-weight:600;line-height:1.3}
+.pips{display:flex;gap:3px}
+.pips i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.pips i.on{background:var(--warn)}.pips.hi i.on{background:var(--bad)}
+details.ms summary .pips,details.ms .pips{visibility:hidden}
+details.ms .dt{color:var(--ok)}
+details.ms.st0 .dt{color:var(--f)}
+.fb{padding:12px 0 4px 116px;font-size:15.5px}
+.fb p{margin:0 0 10px}
+.fb b{display:block;font-size:14px;color:var(--mute);font-weight:600}
+.fb .lead{display:inline-block;color:#fff;font-size:13px;font-weight:600;padding:1px 10px;border-radius:999px}
+.lead.f{background:var(--f)}.lead.m{background:var(--m)}.lead.b{background:var(--mute)}
+.pat{padding:14px 0;border-top:1px solid var(--line)}
+.pat b{display:block;font-size:18px}
+.pat p{margin:3px 0 0;color:var(--mute);font-size:15.5px}
+@media (max-width:680px){details.fg summary{grid-template-columns:1fr auto}details.fg .dt{grid-column:1/-1}.fb{padding-left:0}}
+.st{display:inline-block;font-size:13px;font-weight:600;padding:0 9px;border-radius:999px;margin-top:5px;border:1px solid currentColor}
+.st.ok{color:var(--ok)}.st.mix{color:var(--warn)}.st.bad{color:var(--bad)}.st.unk{color:var(--mute)}
+.banner{background:var(--panel);border-left:6px solid var(--warn);border-radius:4px 14px 14px 4px;padding:14px 18px;margin:0 0 10px;font-size:15px}
+.pl h3{font-size:24px;margin:26px 0 4px}
+.pl .it{border-top:1px solid var(--line);padding:10px 0}
+.pl .it b{display:block}.pl .it p{margin:2px 0 0;font-size:15px;color:var(--mute)}
+.jg{background:var(--panel);border:1px solid var(--line);border-left:6px solid var(--warn);border-radius:4px 16px 16px 4px;padding:16px 20px;margin:12px 0 24px}
+.jg p{margin:0 0 12px;color:var(--mute);font-size:15px}
+.jg label{display:flex;gap:12px;align-items:flex-start;cursor:pointer;font-weight:600;line-height:1.45}
+.jg input{flex:none;width:22px;height:22px;margin:1px 0 0;accent-color:var(--m);cursor:pointer}
+.jg input:focus-visible{outline:2px solid var(--m);outline-offset:3px}
+#janjiBody:not([hidden]){animation:jin .5s ease}
+@keyframes jin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+<h1><span class="f">Fatin</span> &amp; <span class="m">Faiq</span><br>dibedah Brandon</h1>
+<p>Dua tahun chat WhatsApp, diperiksa tanpa gula. Brandon ialah psikologi hubungan yang sarkastik, dan dia tak bagi markah percuma kepada sesiapa. Nombor di bawah datang daripada log. Skor yang dilabel "skor Brandon" ialah penilaian, bukan statistik.</p>
+<div class="chips">
+<span class="chip"><b>155,723</b> mesej</span>
+<span class="chip"><b>20 Nov 2024 hingga 26 Okt 2026</b></span>
+<span class="chip"><b id="cd">12</b> hari ke nikah (8 Nov 2026)</span><span class="chip"><b id="cd2">39</b> hari ke sanding (5 Dis 2026)</span><span class="chip">Hari jadi: Fatin 23 Apr, Faiq 7 Ogos</span>
+</div>
+</header>
+<div class="banner"><b>Nota penting:</b> log WhatsApp yang dianalisis dipotong pada <b>26 Okt 2026</b> (mesej terakhir 2:41 petang). Apa-apa selepas itu tidak termasuk. Nikah (belah Fatin) 8 Nov 2026 dan sanding (belah Faiq) 5 Dis 2026.</div>
+<div class="banner" style="border-color:var(--m)"><b>Disclaimer:</b> semua dalam laman ini berdasarkan data teks dalam log, bukan menyebelahi Fatin atau Faiq. Analisis boleh silap dan tidak semestinya betul. Brandon tak nampak nada suara, panggilan, atau apa yang berlaku bersemuka, jadi anggap ini cermin kasar, bukan hukuman.</div>
+<nav>
+<a href="#kuasa">Dinamik kuasa</a><a href="#stats">Statistik</a><a href="#meter">Meter Brandon</a><a href="#sifat">Sifat</a><a href="#flags">Flag</a><a href="#pivot">Detik log</a><a href="#effort">Effort</a><a href="#janji">Janji</a><a href="#roast">Roast</a><a href="#pelan">Pelan</a><a href="#verdict">Verdict</a>
+</nav>
+
+<section id="kuasa">
+<h2>Dinamik kuasa</h2>
+<p class="sub">Siapa kejar, siapa lari, dan apa yang sebenarnya dikatakan di bawah teks.</p>
+<div class="take f"><h3>Fatin banjir, dua-dua senyap</h3><p>Fatin hantar 61% mesej dan 3.0 mesej setiap giliran, Faiq 1.9. Dalam 50 jeda senyap 3 jam ke atas semasa konflik, Fatin yang tak membalas dalam 29, Faiq dalam 21. Faiq yang memecah senyap dalam 30 daripada 50 jeda, Fatin 20. Pengecualian besar: 25 Okt 2026, bila Fatin minta maaf pukul 8:27 malam dan Faiq baru membalas 12:20 tengah hari, lebih 16 jam, dengan “Okay, saya minta maaf”.</p></div>
+<div class="take"><h3>Kuasa seri, senjata lain</h3><p>Faiq pegang senyap dan tarik diri. Fatin pegang ayat tajam dan ancaman keluar ("ak dah pk cara nk cerai", "duit mak ak hbes 30k"). Dua-dua tahu senjata masing-masing berkesan, jadi dua-dua terus guna.</p></div>
+<div class="take w"><h3>Diagnosis: demand-withdraw spiral</h3><p>Fatin mendesak dan meletup, Faiq defensif lalu menarik diri, dan Fatin makin mendesak. Dalam bahasa Gottman, Fatin bawa contempt, Faiq bawa stonewalling dan defensiveness. Ini bukan kes anxious-avoidant klasik sebab Faiq pun meletup, cuma gayanya senyap dan sinis.</p></div>
+<div class="take f"><h3>Terjemahan subtext</h3><p>Fatin "penat" bermaksud dia rasa jadi emak Faiq sambil urus kenduri sorang. Faiq "slow2" bermaksud dia dengar permintaan Fatin sebagai serangan terhadap siapa dia. Fatin "sorry" selalunya membawa invois ("sorry sebab ko trigger aku"). Faiq "ok aku salah ko menang" ialah keluar dari argument tanpa keluar dari rasa marah.</p></div>
+</section>
+
+<section id="stats">
+<h2>Statistik forensik</h2>
+<p class="sub">Setiap bar dibahagi antara Fatin dan Faiq. Lebar bar menunjukkan siapa dominan.</p>
+<div class="legend"><span><i style="background:var(--f)"></i>Fatin</span><span><i style="background:var(--m)"></i>Faiq</span></div>
+<div id="dual"></div>
+<p class="sub" style="font-size:14px">Angka senyap, maaf dan “ko marah” ialah anggaran kasar daripada kata kunci dan sampel kecil. Baca sebagai arah kecenderungan, bukan keputusan mahkamah.</p>
+<h3 style="margin:34px 0 4px;font-size:22px">Volume mesej sebulan (Jan 2025 hingga Okt 2026)</h3>
+<p class="sub" style="margin-bottom:6px">Puncak Mac 2025 dengan 16,810 mesej. Okt 2026 sekitar 3,800 (turun 77%). Penurunan begini biasa bila pasangan dah settle, jadi bukan flag sendirian.</p>
+<div class="chart" id="vol"></div><div class="axis" id="volx"></div>
+<h3 style="margin:34px 0 4px;font-size:22px">Kadar perkataan konflik (% mesej)</h3>
+<p class="sub" style="margin-bottom:6px">Kata kunci seperti marah, maaf, penat, ego, respect, trigger. Okt 2026 mencecah 3.5%, paling tinggi sejak mula. Pada 26 Okt sahaja, 19% mesej hari itu.</p>
+<div class="chart c" id="conf"></div><div class="axis" id="confx"></div>
+<p class="sub" style="margin-top:18px">Masa paling sibuk untuk kedua-duanya ialah sekitar pukul 5 petang. Kebanyakan hari, lebih 96% mesej bukan gaduh.</p>
+</section>
+
+<section id="meter">
+<h2>Meter Brandon</h2>
+<p class="sub">Penilaian Brandon berdasarkan apa yang dibaca. Skor 0 sampai 10, dan hijau lebih baik kecuali dinyatakan.</p>
+<div id="gauges"></div>
+<div id="dual2"></div>
+</section>
+
+<section id="sifat">
+<h2>Sifat peribadi</h2>
+<p class="sub">Bacaan Brandon daripada cara menulis dan bergaduh, bukan ujian psikologi. Skor 0 sampai 10, dan bar dibahagi antara Fatin dan Faiq.</p>
+<div class="legend"><span><i style="background:var(--f)"></i>Fatin</span><span><i style="background:var(--m)"></i>Faiq</span></div>
+<div id="traitm"></div>
+<div class="cols" style="margin-top:20px"><div class="col"><h3 style="color:var(--f)">Fatin</h3><div id="trf"></div></div><div class="col"><h3 style="color:var(--m)">Faiq</h3><div id="trm"></div></div></div>
+</section>
+
+<section id="flags">
+<h2>Flag, setara 12 lawan 12</h2>
+<p class="sub">Dua belas hijau dan dua belas merah, enam untuk Faiq dan enam untuk Fatin di setiap sisi. Tiada siapa terlepas.</p>
+<div class="cols">
+<div class="col ok"><h3>Green flag</h3><div id="gf"></div></div>
+<div class="col bad"><h3>Red flag</h3><div id="rf"></div></div>
+</div>
+</section>
+
+<section id="pivot">
+<h2>Detik log: dari goreng pisang hingga kenduri</h2>
+<p class="sub">Bermula daripada titik mula kisah mereka, kemudian tiga belas episod gaduh paling berat yang Brandon baca dari punca hingga reda, ditambah detik manis. Bukan setiap pertelingkahan kecil ada di sini. Tekan satu episod untuk buka butirannya.</p>
+<h3 style="font-size:22px;margin:0 0 4px">Tahap panas setiap episod</h3>
+<p class="sub" style="margin-bottom:4px">Merah ialah tahap 4 dan 5. Gaduh berat berlaku kira-kira 5 bulan, 3.5 bulan, 4 bulan, 1.5 bulan, lalu 3 minggu selepas yang sebelumnya. Jarak makin pendek, makin hampir kenduri.</p>
+<div class="hs" id="hs"></div><div class="hsx" id="hsx"></div>
+<div style="height:26px"></div>
+<div id="fights"></div>
+<h3 style="font-size:26px;margin:40px 0 6px">Corak yang berulang</h3>
+<div id="pats"></div>
+</section>
+
+<section id="effort">
+<h2>Surprise, hadiah dan effort</h2>
+<p class="sub">Bukan semua dalam log ini gaduh. Ini yang dua-dua pernah buat untuk satu sama lain, dan Brandon semak terus dalam chat.</p>
+<div class="cols"><div class="col"><h3 style="color:var(--m)">Faiq</h3><div id="efm"></div></div><div class="col"><h3 style="color:var(--f)">Fatin</h3><div id="eff"></div></div></div>
+<div class="take w" style="margin-top:22px"><h3>Dua-dua rasa effort sendiri tak nampak</h3><p>Pada 22 Apr 2025 Fatin gurau “I appreciate ur bare minimum effort”, dan Faiq balas 23 Apr “mungkin bare minimum bagi ko, tapi bagi aku byk jugak la effort”. Pada 3 Apr 2026 Faiq kata “takde aku buat bare minimum”, dan 3 Okt Fatin kata “ak dah lepas bare minimum ak”. Frasa sama, dua-dua rasa dialah yang paling banyak beri. Bila dua orang sama-sama rasa tak dihargai, masalahnya selalunya bukan kurang effort tapi tiada orang yang sebut “aku nampak”.</p></div>
+</section>
+
+<section id="janji">
+<h2>Janji-janji</h2>
+<div class="jg">
+<p>Ruangan ini memaparkan penilaian janji kedua-dua pihak dan boleh terasa pedas. Sebelum buka, sila baca akuan di bawah.</p>
+<label for="jjanji"><input type="checkbox" id="jjanji" aria-controls="janjiBody"><span>Saya berjanji akan membaca ruangan ini dengan hati yang tenang dan terbuka, tanpa marah atau menyalahkan sesiapa. Saya faham ruangan ini dijana oleh AI, jadi kesilapan mungkin berlaku dan ia bukan hukuman muktamad.</span></label>
+</div>
+<div id="janjiBody" hidden>
+<p class="sub">Janji yang signifikan sahaja, setiap seorang sepuluh. Status disemak terus pada log: Brandon cari sama ada ada bukti ditepati, diulang atau dilanggar selepas janji dibuat. Kalau tindakan berlaku di luar WhatsApp, statusnya "tak dapat disahkan".</p>
+<div id="jsum" style="margin-bottom:22px"></div>
+<div class="cols"><div class="col"><h3 style="color:var(--m)">Janji Faiq</h3><div id="jm"></div></div><div class="col"><h3 style="color:var(--f)">Janji Fatin</h3><div id="jf"></div></div></div>
+<div class="take w" style="margin-top:22px"><h3>Janji jadi mata wang pujukan</h3><p>Pada 3 Apr 2026 Faiq kata “aku je yg kena selalu tabur janji sbb nak pujuk ko”, dan Fatin balas “ko janji sbb ko nak pujuk je la”. Faiq kemudian minta janji timbal balik, iaitu Fatin belajar bertolak ansur dengan ketidakselesaan kecil, dan Fatin terima pada 7 Apr. Janji tanpa tarikh dan tanpa ujian ialah wang yang dicetak terlalu banyak, dan nilainya turun setiap kali gaduh. Pada 24 Dis 2025 Faiq sendiri kata dia tak mahu janji lagi sebab “cukup la janji2 aku yg aku tak tepati”.</p></div>
+<div class="take" style="margin-top:16px"><h3>Accountability: boleh tak ikut janji kalau orang lain tak ikut janjinya?</h3><p>Pendapat Brandon: boleh, tapi bukan dengan alasan “dia pun ulang”. Janji tentang diri sendiri (tak merendah, tak sebut putus, tak senyap 16 jam) kena dipegang walaupun orang lain gagal. Kegagalan dia menerangkan kenapa kau marah, bukan menggugurkan hutang kau. Fatin guna logik itu pada 26 Okt (“klau ko boleh buat bnda yg sama ulang kenapa ak x boleh”), dan Faiq guna versi sendiri pada hari yang sama (“tujelah alasan ko bila sakitkan hati aku”). Dua-dua betul bahawa yang lain mengulang, dua-dua salah bila jadikan itu lesen.</p><p style="margin-top:8px">Beza yang penting: tak ikut diam-diam lawan tak ikut terus terang. Kalau pihak lain ulang berkali-kali, cara jujur ialah sebut: “janji X ni aku tak boleh teruskan sebab Y berulang, ini yang aku perlukan”, bukan hukum dengan senyap. Janji timbal balik seperti 3 Apr 2026 (bertolak ansur) memang bersyarat sejak awal, jadi di situ dua-dua boleh menuntut.</p><p style="margin-top:8px">Ukuran Brandon: accountability bermakna jawab bahagian kau dulu, tanpa “tapi”. Maaf Fatin 26 Okt paling dekat dengan itu, walaupun beberapa minit sebelumnya dia masih tunding jari. Faiq pula kerap mengaku salah, tapi baki akaunnya masih “slow2”. Skor: dua-dua lulus bab mengaku, gagal bab berhenti mengaudit orang lain.</p></div>
+</div>
+</section>
+
+<section id="roast">
+<h2>Roast Brandon</h2>
+<p class="sub">Dari awal hubungan sampai lately, bukan hanya gaduh terakhir. Satu bahan setiap fasa, dua-dua pihak.</p>
+<div class="rs">
+<div style="border-top:6px solid var(--m)"><h3>Roast Faiq</h3><div id="rq"></div></div>
+<div style="border-top:6px solid var(--f)"><h3>Roast Fatin</h3><div id="rf2"></div></div>
+</div>
+</section>
+
+<section id="pelan">
+<h2>Pelan menambah baik</h2>
+<p class="sub">Setiap poin berdasarkan sesuatu yang benar-benar berlaku dalam log. Pilih tiga dahulu, jangan cuba semuanya serentak.</p>
+<div class="pl" id="plan"></div>
+</section>
+
+<section id="verdict">
+<h2>Verdict</h2>
+<div class="label">Kasih sayang tulen, sistem bergaduh rosak.</div>
+<p class="sub">Sayang, rindu dan lawak masih seimbang, dan lebih 96% mesej bukan konflik. Tetapi gaduh dua tahun lepas guna skrip sama, dan Okt 2026 paling teruk. Tekanan kenduri mempercepat, bukan punca asal. Log ini tidak menunjukkan bahaya fizikal atau kawalan sebelah pihak. Ia menunjukkan dua orang dengan habit yang kebetulan padan sangat rosaknya. Brandon tak tahu pengakhirannya, dan itu bergantung pada kerja dua-dua.</p>
+<div class="rule"><span class="no">1</span><div><b>Faiq: berhenti hilang</b><p>Kalau tak boleh bincang, hantar "aku balas pukul 8" dan betul-betul balas. Marah boleh kekal, 16 jam senyap tak perlu.</p></div></div>
+<div class="rule"><span class="no">2</span><div><b>Faiq: ambil separuh beban kenduri secara nyata</b><p>Pegang terus katering, vendor dan duit. Nisbah sebutan "kahwin" 85 lawan 7 itu ada kos, dan Fatin yang bayar.</p></div></div>
+<div class="rule"><span class="no">3</span><div><b>Fatin dan Faiq: peraturan gaduh dan pihak ketiga, sebelum nikah 8 Nov</b><p>Tiada "sorry tapi", tiada "ko menang", tiada cerai atau putus disebut ketika panas, dan time-out 30 minit dibenarkan. Cari satu sesi dengan ustaz, ustazah atau kaunselor, kalau boleh sebelum nikah dan sekurang-kurangnya sebulan selepasnya. Dua tahun, dua-dua dah kenal polanya, dan kenal pola tak cukup.</p></div></div>
+<div class="foot">Log dipotong pada 26 Okt 2026, 2:41 petang; laman ini dikemas kini 27 Okt 2026. Dibina daripada eksport WhatsApp tanpa call log, jadi dakwaan "20 panggilan" tak boleh disahkan. <b>Semua analisis berdasarkan data, bukan menyebelahi mana-mana pihak, dan boleh silap atau tidak semestinya betul.</b> Brandon hanya nampak teks, bukan nada suara atau apa yang berlaku bersemuka. Nama rakan sepejabat sengaja tidak disebut. Laman ini mengandungi petikan peribadi, jadi simpan pautan kepada orang tertentu sahaja.</div>
+</section>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const left=d=>Math.max(0,Math.ceil((new Date(d+'T00:00:00')-new Date())/864e5));
+$('cd').textContent=left('2026-11-08');$('cd2').textContent=left('2026-12-05');
+const fmt=n=>n.toLocaleString('en-US');
+const dual=[
+["Jumlah mesej",94364,61359,"Fatin hantar 61%"],
+["Purata patah perkataan setiap mesej",5.97,4.80,"Fatin lebih panjang, Faiq lebih ringkas"],
+["Mesej setiap giliran (double-text)",2.99,1.94,"Fatin hantar burst, Faiq jarang lebih dua"],
+["Mulakan perbualan baharu (jeda 4 jam)",432,449,"Faiq sedikit lebih kerap memulakan"],
+["Balasan lambat lebih 3 jam",112,125,"Hampir sama, tiada pihak pemalas"],
+["Min masa balas (minit)",4.6,4.8,"Dua bulan terakhir: 8.8 lawan 9.2"],
+["Sebut \"sayang\"",1190,1553,"Faiq lebih banyak"],
+["Sebut \"rindu\"",355,321,"Seri"],
+["Sebut \"sorry\"",365,606,"Faiq hampir dua kali"],
+["Sebut \"marah\"",243,420,"Faiq lebih kerap menyebutnya"],
+["Sebut \"penat\"",152,68,"Fatin penat dua kali lebih kerap"],
+["Sebut \"kahwin\"",85,7,"Beban perancangan jelas di bahu Fatin"],
+["Soalan (mesej bertanda ?)",6729,945,"Fatin bertanya tujuh kali lebih kerap"],
+["Ketawa (haha, wkwk, emoji)",2156,5462,"Faiq 8.9% mesej, Fatin 2.3%"],
+["Minta selfie (semua gaya, ejaan \"selfie\" dan \"selfi\")",183,236,"Faiq lebih kerap. Fatin mendahului Jan hingga Apr 2025, Faiq mendahului sejak Jul 2025"],
+["Sebut \"ko marah\" kepada pasangan",15,52,"Faiq lebih kerap menyebut marah Fatin"],
+["Jeda senyap 3 jam+ semasa konflik (siapa yang tak balas)",29,21,"50 jeda waktu siang, Fatin lebih kerap senyap"],
+["Memecah senyap dahulu (jeda yang sama)",20,30,"Faiq lebih kerap yang chat dulu"],
+["Minta maaf dahulu pada hari konflik tinggi",26,32,"Daripada 58 hari konflik tinggi"]
+];
+const bars=(id,arr)=>{ $(id).innerHTML=arr.map(a=>{const t=a[1]+a[2],p=Math.round(a[1]/t*100);
+return `<div class="dm"><div class="t"><span>${a[0]}</span><span>${a[3]}</span></div><div class="bar" data-p="${p}"><div class="f">${a[1]%1?a[1]:fmt(a[1])}</div><div class="m">${a[2]%1?a[2]:fmt(a[2])}</div></div></div>`}).join('')};
+bars('dual',dual);
+const gauge=[
+["Humor dan chemistry",8.5,"#1f9d6b","Lawak dari Dis 2024 masih hidup dalam 2026."],
+["Kelajuan repair selepas gaduh",8,"#1f9d6b","Selalunya minta maaf dan baik semula dalam sehari."],
+["Kebersihan pergaduhan",3,"#d9480f","Skrip sama dua tahun: tuduh, defend, audit, ulang."],
+["Kesediaan mendengar tanpa defend",4,"#b7791f","Dua-dua bersedia menjawab sebelum selesai mendengar."],
+["Keselarasan beban kenduri",2,"#d9480f","Fatin pikul hampir semua mental load."],
+["Risiko jika tiada perubahan sebelum nikah 8 Nov",7,"#d9480f","Bukan ramalan putus. Ini skor tekanan, makin tinggi makin penting buat sesuatu."]
+];
+$('gauges').innerHTML=gauge.map(g=>`<div class="g"><div class="t"><span>${g[0]}</span><span>${g[1]}/10</span></div><div class="track"><div data-w="${g[1]*10}" style="background:${g[2]}"></div></div><div class="n">${g[3]}</div></div>`).join('');
+bars('dual2',[
+["Skor contempt (lebih rendah lebih baik)",7,4,"Fatin: ayat merendah. Faiq: sinis dan sarkastik"],
+["Skor palau dan menghilang (lebih rendah lebih baik)",6,6,"Fatin lebih kerap senyap, Faiq menghilang berjam dan bersinis"],
+["Skor sorry yang ikhlas",5,6,"Fatin ada invois, Faiq ada syarat"],
+["Skor usaha membaiki",8,7,"Dua-dua tulis esei accountability pada 26 Okt"]
+]);
+const vol=[9040,13596,16810,10653,10587,10401,9045,5696,7442,6300,6222,6085,2698,4256,4734,4087,5671,4354,4178,3944,4319,3809];
+const mn='JFMAMJJASONDJFMAMJJASO';
+$('vol').innerHTML=vol.map(v=>`<div data-h="${v/16810*100}" title="${fmt(v)}"></div>`).join('');
+$('volx').innerHTML=mn.split('').map(c=>`<span>${c}</span>`).join('');
+const cf=[["Q4 24",.4],["Q1 25",1.5],["Q2 25",2],["Q3 25",2],["Q4 25",2.4],["Q1 26",1.4],["Q2 26",1.4],["Q3 26",1.6],["Okt 26",3.5]];
+$('conf').innerHTML=cf.map(c=>`<div class="${c[1]>3?'hot':''}" data-h="${c[1]/3.5*100}" title="${c[1]}%"></div>`).join('');
+$('confx').innerHTML=cf.map(c=>`<span>${c[0]}<br>${c[1]}%</span>`).join('');
+const G=[
+["m","Faiq cakap sayang paling banyak","1,553 kali lawan 1,190. Faiq tak berat mulut."],
+["f","Fatin menghargai usaha Faiq","“terima kasih utk segala efforts utk jd lelaki yg baik” ditulis pada 26 Okt, ketika masih terluka."],
+["m","Faiq minta maaf dan buat nota untuk berubah","Dia sebut dia buat nota supaya dapat berubah, dan menanggung “silap aku” di depan orang lain."],
+["f","Fatin mengaku salah sendiri, tanpa dipaksa","Dia sebut “ak disrespect ko” dan “tunding salah kt ko”. Ramai orang tak boleh tulis ayat itu."],
+["m","Faiq jujur tentang insecure sendiri","Pada 7 Feb 2025 dia tulis esei panjang kenapa dia tak suka bergambar, dan kata Fatin satu-satunya orang yang dia ceritakan. Kejujuran macam itu mahal."],
+["f","Fatin pikul kenduri dengan sebenar","Katering, anggaran 600 orang, harga, semuanya dia urus. Dia lelah tapi tak lari."],
+["m","Faiq mulakan perbualan dan kekal hadir","449 perbualan baharu dimulakan Faiq. Dia bukan pasif."],
+["f","Fatin balik dalam 65 minit","Dari “pk cara nk cerai” ke “ak pegang janji ko”. Repair hidup."],
+["m","Faiq bela Fatin di belakang","Dia kata dia sentiasa backup Fatin di belakang. Itu setia yang tak nampak dalam log."],
+["f","Fatin sah-kan perasaan Faiq","“apa yg awk rsa tu mmg valid” pada 25 Okt. Ayat yang betul pada masa yang betul."],
+["m","Lawak mereka masih hidup","Dari gurauan goreng pisang 2024 hingga sekarang, humor tak mati. Itu aset besar."],
+["f","Rindu seimbang, tak hambar","355 lawan 321. Kasih sayang tak pudar walau gaduh."]
+];
+const R=[
+["m","Faiq hilang berjam","Lebih 16 jam senyap selepas Fatin minta maaf dan banjir mesej."],
+["f","Fatin guna ayat merendah","“jaga ko mcm adik aku” dan “boy instead of man”. Dia sendiri akui itu kurang ajar."],
+["m","“Ok aku salah ko menang”","Bendera putih bersinis. Ia menutup perbualan, tak menyelesaikannya."],
+["f","Sorry berinvois","“sorry sbb ko trigger aku” mengubah permohonan maaf jadi tuduhan."],
+["m","Mengaudit dan memaksa pengakuan","“ko akui kan ko disrespect aku” dan “1 kali mintak maaf 10 kali tunding jari” tengah Fatin runtuh."],
+["f","Ancaman keluar dan duit 30k","“pk cara nk cerai” dan “duit mak ak hbes 30k” menekan Faiq dengan kos tenggelam."],
+["m","Menghukum dengan menarik diri","“Lepasni aku tk mintak dah pendapat ko”. Itu hukuman, bukan sempadan."],
+["f","Banjir panggilan dan esei tengah malam","20 panggilan dan mesej 12:52 pagi, kemudian hairan Faiq tak balas. Kadar tekanan tinggi."],
+["m","Cemburu yang dinafikan","“Aku marah haritu sbb ko chat lelaki” disusuli “tu pon bukan marah”. Dua ayat bertentangan."],
+["f","Senarai bernombor 24 Dis","Lapan sebab, satu mesej. Itu bukan perbincangan, itu pertuduhan."],
+["m","“Slow2” tanpa tarikh","Berubah tanpa garis masa ialah janji yang tak boleh diuji. Nikah 8 Nov semakin hampir."],
+["f","Senyap sampai Faiq pujuk dulu","Dalam jeda senyap semasa konflik, Fatin yang tak membalas 29 kali lawan 21. Faiq pecah senyap 30 kali. Marah dia sah, tapi penghantar mesej pertama sentiasa orang lain."]
+];
+const fl=(id,arr)=>$(id).innerHTML=arr.map(a=>`<div class="fl"><span class="who ${a[0]}">${a[0]=='f'?'Fatin':'Faiq'}</span><b>${a[1]}</b><p>${a[2]}</p></div>`).join('');
+fl('gf',G);fl('rf',R);
+const FG=[
+{d:`20 Nov 2024`,ms:1,s0:1,t:`Titik mula: goreng pisang`,p:`Mesej pertama dalam log. Fatin tanya Faiq kalau dia boleh kirim goreng pisang RM5, Faiq balas “sume sekali rm10”. Pukul 2:55 petang Faiq menutup dengan “sama2”. Hanya 69 mesej pada Nov, tapi menjelang Dis sudah 1,727 dan Jan 2025 melonjak ke 9,040. Daripada transaksi goreng pisang, jadi dua tahun chat.`},
+{d:`23 hingga 28 Jan 2025`,ms:1,s0:1,t:`Fatin ajak dating, Faiq syak`,p:`Fatin berulang kali ajak “dating” (23 hingga 25 Jan). Faiq tanya “Ape agenda ko ni tetiba persistent sgt ajak dating”. Fatin menjawab dengan logik: “ada ke org ajak g dating klau dia tak suka org tu?”. 28 Jan Fatin terus terang: “Ak pon x tau bila ak start suka ko tp ak tau ak suka ko je” dan “Ni first time ok ak mgorat org”. Faiq balas dia rasa “ngam” dengan perangai Fatin dari awal, dan mereka mula bercakap soal kahwin, nafkah dan keluarga dalam chat yang sama.`},
+{d:`30 Jan 2025`,ms:1,t:`Mula panggil sayang`,p:`Pada 30 dan 31 Jan, Fatin tulis “ak pggil mu sayang” dan Faiq balas “selamat malam juga cintaku”. Itulah titik mula versi chat bagi pasangan.`},
+{d:`15 Feb 2025`,h:2,t:`Merajuk pertama dan lahirnya time-out`,c:`Fatin tersinggung, Faiq diam. Fatin minta Faiq bagitahu kalau terasa, tapi bagitahu dengan lembut.`,f:`Fatin: “Klau tak timeout ak takut ak akn kluar ayt2 yg ak xleh nk trik blk”. Faiq: “Aku power bab menyimpan perasaan.. kalau terasa aku tk tnjuk pon”. Fatin balas, itu sama dengan palau.`,x:`Fatin ambil time-out, lepas berbuka puasa dia putuskan memaafkan. Selesai dalam sehari.`,l:`f`},
+{d:`1 Mac 2025`,h:2,t:`Selfie perempuan lain dan isu aurat`,c:`Fatin angkat hal Faiq pernah minta selfie perempuan yang bukan isteri. Perbincangan jadi debat tentang tanggungjawab lelaki.`,f:`Faiq akui perbuatan itu tak bagus, tapi simpul “lelaki semua sama” dan kata malas teruskan sebab takut gaduh. Fatin: “saya memalau dlu skejap”.`,x:`Faiq pujuk: “dah la merajuk.. terseksa jiwa raga I”. Pukul 4:53 petang Fatin: “Saya sudah tenang”. Kira-kira 2.5 jam.`,l:`m`},
+{d:`5 Mac 2025`,h:1,t:`Pertama kali Faiq merajuk`,c:`Fatin generalisasi “lelaki semua nak senang”. Faiq elak topik sebab takut Fatin merajuk kalau dia bercakap.`,f:`Fatin: “Maafkan saya sbb mleret salahkan laki”. Dia sendiri sebut “First time ni Faiq merajuk”.`,x:`Fatin hantar lagu TikTok untuk memujuk dan berjanji pujuk lagi esok. Reda dalam 25 minit.`,l:`f`},
+{d:`23 Apr 2025`,ms:1,t:`Hari jadi Fatin (2025)`,p:`Faiq mengucap pukul 12:01 pagi. Tapi pada 22 Apr dia mengaku baru ingat tiga hari sebelum dan belum beli hadiah, dan Fatin terasa sebab rasa Faiq “amek jalan mudah” dengan bawa makan. Petang 23 Apr Faiq bawa bunga (dia plan bunga, patung dan coklat, tapi hanya bunga yang sempat) dan berpesan “jangan buang di tong sampah ye hadiah saya”. Fatin kata itu bunga pertama yang dia dapat daripada sesiapa, dan dia “cair” bila Faiq bagitahu. Hari yang sama rakan sepejabat mengusik dia beli kek untuk diri sendiri.`},
+{d:`26 Apr 2025`,h:2,t:`Sakit hati rakan sepejabat, lalu cemburu lelaki`,c:`Fatin sakit hati rakan sepejabat meraikan hari jadi dengan churros pada hari dia tertekan dengan mesyuarat.`,f:`Faiq validate dengan baik: “aku paham 200%”. Kemudian dia tanya tentang lelaki rakan sekelas Fatin: “Ada apa² ke ngan ko dia tu?”. Fatin: “Awak annoyed ke dgn prngai saya?”. Faiq: “Cuma sedih2 sikit. Takde marah pon”.`,x:`Fatin mengaku perangainya minggu itu “ntah apa2”. Reda malam itu juga.`,l:`f`},
+{d:`13 hingga 14 Jun 2025`,h:3,t:`Faiq rasa diperbodohkan`,c:`Fatin bergurau dengan cara yang buat Faiq rasa diperbodohkan, dan nampak “puas” bila dia bereaksi.`,f:`Faiq tutup perbualan: “Oklah kalau begitu. Lupakan jelah pasal ni”. Fatin hantar maaf panjang: “i take full responsibility of my actions”. Esoknya Faiq periksa bin telefon untuk gambar yang Fatin padam.`,x:`Fatin minta maaf dahulu, Faiq tutup dengan “kat mata aku ko sentiasa cantik”. Kira-kira satu hari.`,l:`f`},
+{d:`3 hingga 7 Jul 2025`,h:4,t:`Senyap 69 jam dan perkataan putus yang pertama`,c:`Fatin sebut dua rakan lelaki dan baju sedondon. Faiq rasa dipancing. Hal hantar balik pula: Faiq tukar plan hantar rakan supaya Fatin tak terasa.`,f:`Fatin: “klau nak putus bgtau ak xnk pkai dah cincin”. Faiq: “kalau dah mention putus, mngkin sbb dah tawar hati”. Fatin akui “mmg dah start rsa tawar hati” tapi masih terbuka berbincang, dan tulis “from now on.. blk sndiri2”.`,x:`Standoff kira-kira 11 jam. Pukul 9:08 malam Faiq: “nasib kali ni ko yg start ajak borak.. Maafkan Ego saya”. Fatin yang menghubungi dahulu.`,l:`f`},
+{d:`7 Ogos 2025`,ms:1,t:`Hari jadi Faiq (2025)`,p:`Fatin mengucap pukul 12:05 pagi. Faiq tak suka ramai tahu hari jadinya kecuali orang yang dia sayang. Mereka rancang hadiah dan dating, tapi 8 Ogos Faiq terpaksa postpone sebab saudaranya meninggal dalam kemalangan dan dia balik Johor.`},
+{d:`16 Ogos 2025`,ms:1,t:`Sambutan hari jadi Faiq yang tertangguh`,p:`Selepas Faiq balik, Fatin risau dia tak suka hadiah yang dibeli (11 Ogos), dan Faiq jawab dia memang tak pandai bereaksi bila dapat hadiah. Mereka cadang dating hujung minggu itu, dan ucapan terima kasih atas hadiah tercatat 16 Ogos: “Tenkiu sayangg atas hadiahnya”. Sambutan lewat seminggu, tapi tak dibatalkan.`},
+{d:`14 Ogos 2025`,h:2,t:`Komen rambang tentang rakan sepejabat`,c:`Faiq kait contoh pasangan rakan sepejabat sebagai perbandingan, padahal Fatin tak pernah kata mereka bergaduh. Mood Fatin terus rosak.`,f:`Fatin rasa Faiq tak faham apa yang dia cerita. Petang itu dia tulis panjang tentang takut dilihat “controlling” soal IG.`,x:`Faiq: “Memang salah aku. Maafkan saya sayang” dan “aku take note”. Satu hari.`,l:`m`},
+{d:`10 hingga 11 Nov 2025`,h:3,t:`“Maaf tapi awak bodoh”`,c:`Maaf Fatin berbunyi “saya mintak maaf, tapi...”, dan sebut Blackmores yang Faiq rasa merendahkan. Faiq: “ko mintak maaf mcm bukan mintak maaf”.`,f:`Fatin: “Nonchalant tak sama dgn bodoh”. Faiq: “akhirnya aku salah ko btul”. Fatin: “ak nk proof of action”.`,x:`Kedua-dua tulis senarai maaf bernombor (Faiq 12:35 tengah hari, Fatin 1:27 petang). Petang itu chat biasa, esoknya Faiq minta selfie. Kira-kira 3 jam.`,l:`m`},
+{d:`24 Dis 2025`,h:4,t:`Sukan lepas kerja, rakan perempuan dan lapan sebab`,c:`Faiq main sukan lepas waktu kerja bersama rakan pejabat dan sempat sertai orang yang Fatin tak setuju. Gosip rakan sekerja tentang “bf orang office” menambah panas.`,f:`Fatin hantar senarai bernombor lapan sebab marah. Faiq: “1 dgn 8 tak btul”, tapi “7 tu aku tak terfikir tpi btul jugak”. Fatin: “maafkan saya... masih terluka” dan “esok dtg dgn sorry ko je”.`,x:`Faiq tawar balik awal untuk elak jem dan dapat lampu hijau. Fatin hantar maaf bertubi malam itu. Chat biasa semula 26 Dis.`,l:`m`},
+{d:`2 hingga 3 Apr 2026`,h:4,t:`“Kuli”, duit dan ugutan block`,c:`Faiq tawar hantar, Fatin: “knapa ckp lewat2”. Faiq: “truskan la dgn sangka buruk ko”. Fatin: “asal sbb nk layan prmpuan lain ke”.`,f:`Fatin hantar thread di Threads. Faiq: “dah2 la tu”. Fatin: “Transfer balik ak akn BLOCK ko dalam hidup ak for good”, dan hal cincin timbul. Faiq bayar balik tapi: “aku tknk duit yg aku tak mintak”.`,x:`Pukul 9:58 malam Faiq hulur tangan: “jom la kita berbaik balik sikit2.. gaduh lama² nanti awkward”. Bagaimana Fatin menyambut tidak Brandon pastikan.`,l:`m`},
+{d:`23 Apr 2026`,ms:1,t:`Hari jadi Fatin (2026)`,p:`Faiq mengucap tepat 12:00 pagi dengan ucapan panjang. Sehari sebelum itu dia mengaku “tk pandai nak surprise2, kita besederhana saja”. Dia beri jam Garmin dan bunga, dan pagi itu mengaku mimpi Fatin tak suka hadiahnya sampai menangis. Fatin tulis “Sayang la nk pkai jam tu” dan “Ak rsa ak pon x mmpu nk buat surprise mcm ni”. Esoknya Faiq mengadu satu komen tentang jam itu seolah-olah dia salah beli hadiah.`},
+{d:`7 Mei 2026`,ms:1,t:`Mula bincang merisik dan tunang`,p:`Perkataan merisik, tunang dan cincin disebut 60 kali pada Mei, dan Faiq berbincang dengan emaknya tentang adat Kelantan.`},
+{d:`7 Ogos 2026`,ms:1,t:`Hari jadi Faiq (2026)`,p:`Fatin mengucap pukul 12:03 pagi (“I love you so much”). Pada 15 Jul Faiq sendiri minta hadiah dan kata “surprise kan je saya apa2”, tapi Fatin jawab dia tak boleh buat surprise sebab Faiq yang kena uruskan hadiah itu. Pada hari itu Fatin belanja kek (guna voucher Faiq), dan sambutan dating dirancang 8 Ogos.`},
+{d:`14 Ogos 2026`,h:5,t:`“Nak tarik balik tunang pon ak dah ok”`,c:`Faiq mengetepikan Fatin dalam satu hal (isu repost dan prioriti). Fatin: Faiq tak letak priority di tempat yang sepatutnya.`,f:`Fatin: “Klau nak tarik blk tunang ni pon ak dah ok” dan “lama sgt dah ak tak rsa nk putus bila gaduh, kali ni dtg blk”. Dia sampai terfikir suruh Ummi call ibu Faiq. Faiq: “selama ni yg aku priority kan ko, semua meaningless ke?”.`,x:`Dalam kira-kira 2 jam, Fatin: “xde sehari pon bkurang rsa sayang dan cinta aku kat ko”. Faiq minta maaf tiga kali sepanjang petang.`,l:`f`},
+{d:`2 hingga 5 Okt 2026`,h:5,t:`Futsal, menu dan “perempuan gila”`,c:`2 Okt Faiq tak update pergi futsal. 3 Okt tengah hari Faiq tanya menu dan dimarah. Faiq berkata dia marah sebab Fatin chat lelaki.`,f:`Fatin: “kata2 maaf tu bukan ticket”. Faiq: “ok aku salah ko menang”. Fatin: “jalan sndiri lagi sng”, kemudian “Ko nak sgt ke jd perempuan” dan “ko tak minat nk step up”, dan “Dont be lelaki coward”. Faiq: “takde hala tuju chat ko ni”.`,x:`4 Okt Fatin mengaku “mmg ak salah tggalkan ko mcm org bodoh”, dan Faiq mengaku salah bab futsal. 5 Okt sudah balik ke urusan borang kariah. Tiada detik maaf yang bersih, hanya beralih ke logistik. Kira-kira dua hari.`,l:`b`},
+{d:`25 hingga 26 Okt 2026`,h:5,t:`Sampah Family Mart dan 20 panggilan`,c:`Fatin meletup selepas Faiq menghantarnya ke dentist dan pos. Faiq tak membalas lebih 16 jam. Hari berikutnya sambung pasal sampah di Family Mart.`,f:`Fatin: “Ak call 20 kali smlam”. Faiq: “1 kali mintak maaf 10 kali tunding jari kat aku”. Fatin: “Ak dah pk cara nk cerai”. Faiq: “aku bukan lelaki sempurna boleh bertukar satu malam”.`,x:`1:41 petang Faiq: “Tolong la percaya aku”. Fatin tulis empat maaf, dan pukul 2:14: “ak pegang janji ko”. Kira-kira 65 minit dari titik terendah ke damai.`,l:`b`},
+{d:`8 Nov 2026`,ms:1,t:`Nikah (belah Fatin)`,p:`Tarikh akad nikah. Borang kariah dan urusan pejabat agama sudah dibincang pada awal Okt.`},
+{d:`5 Dis 2026`,ms:1,t:`Sanding (belah Faiq)`,p:`Majlis walimatulurus belah Faiq, selepas nikah.`}
+];
+const nm={f:`Fatin`,m:`Faiq`,b:`Dua-dua serentak`};
+$('fights').innerHTML=FG.map(a=>{
+ if(a.ms)return `<details class="fg ms ${a.s0?'st0':''}"><summary><span class="dt">${a.d}</span><span class="tt">${a.t}</span><span class="pips"></span></summary><div class="fb"><p>${a.p}</p></div></details>`;
+ const pips=[1,2,3,4,5].map(i=>`<i class="${i<=a.h?'on':''}"></i>`).join('');
+ return `<details class="fg"><summary><span class="dt">${a.d}</span><span class="tt">${a.t}</span><span class="pips ${a.h>=4?'hi':''}" title="Tahap ${a.h} daripada 5">${pips}</span></summary><div class="fb"><p><b>Pemicu</b>${a.c}</p><p><b>Apa yang berlaku</b>${a.f}</p><p><b>Cara selesai</b>${a.x}</p><p><b>Siapa lembut dahulu (pada episod ini)</b><span class="lead ${a.l}">${nm[a.l]}</span></p></div></details>`}).join('');
+const hf=FG.filter(a=>a.h);
+$('hs').innerHTML=hf.map(a=>`<div class="${a.h>=4?'hot':''}" data-h="${a.h*20}" title="${a.d}"></div>`).join('');
+const lab=a=>{const t=a.d.split(' ');return t[t.length-2]+' '+t[t.length-1].slice(2)};
+$('hsx').innerHTML=hf.map(a=>`<span>${lab(a)}</span>`).join('');
+const PT=[
+["Maaf yang berinvois, dari Nov 2025 hingga Okt 2026","10 Nov 2025: “saya mintak maaf, tapi...”. 3 Apr 2026: maaf yang disusuli “biasalah kena tggu ak gila dulu”. 26 Okt 2026: Fatin sendiri tulis cara dia minta maaf selalu “berakhir dgn ak tunding salah kt ko”. Polanya sama, cuma kali terakhir Fatin menamakannya sendiri."],
+["Senyap dan palau, dua hala","Dalam 50 jeda senyap waktu konflik, Fatin yang tak membalas dalam 29 dan Faiq dalam 21. Jeda paling panjang pun lebih banyak dari Fatin: 53.9 jam pada 24 Okt 2025, 30.7 jam pada 21 Dis 2025. Faiq pula senyap dengan cara lain: 15 Feb 2025 “aku power bab menyimpan perasaan”, 7 Jul 2025 “aku nekad tknk jdi starter”, 25.6 jam pada 5 Apr 2026 dan lebih 16 jam pada 25 Okt 2026. Faiq sendiri kata dia tak suka dipalau sejak 17 Mac 2025."],
+["Cemburu dua hala","Fatin pada perempuan: 1 Mac 2025, 24 Dis 2025, 2 Apr 2026 (“sbb nk layan prmpuan lain ke”). Faiq pada lelaki: 26 Apr 2025, 7 Jul 2025, 3 Okt 2026 (“Aku marah haritu sbb ko chat lelaki”). Dua-dua guna senjata yang sama, jadi tiada siapa boleh jadi hakim."],
+["Pemicu yang remeh dan logistik","Hantar, balik, lambat dan tak update muncul dalam empat gaduh berat: 7 Jul 2025, 2 Apr 2026, 2 Okt 2026, 25 Okt 2026. Isu sebenar jarang tentang hantar, ia tentang rasa dihargai dan dipercayai."],
+["Siapa lembut dahulu: dua jawapan","Dalam 13 episod berat yang dibaca satu-satu, Fatin 6, Faiq 5, serentak 2. Tetapi merentas seluruh log, Faiq lebih kerap memecah senyap (30 lawan 20) dan minta maaf dahulu pada 32 daripada 58 hari konflik tinggi (Fatin 26). Jadi perasaan Faiq bahawa Fatin lebih kerap merajuk disokong data, kecuali dua pengecualian besar pada Faiq: 7 Jul 2025 dan 25 Okt 2026. Sampel kecil, anggaran kasar."],
+["Penyelesaian yang berkesan, dan yang tak","Berkesan: senarai maaf bernombor, humor, “ayat pengasih”, tindakan nyata (Faiq balik awal, 24 Dis 2025). Tak berkesan: “ok aku salah ko menang”, “maaf tapi”, dan maaf tanpa bukti tindakan, kerana Fatin tulis dia mahu “proof of action”."]
+];
+$('pats').innerHTML=PT.map(a=>`<div class="pat"><b>${a[0]}</b><p>${a[1]}</p></div>`).join('');
+const TM=[
+["Ekspresif dan lantang beremosi",9,5,"Fatin menulis lantang dan panjang, Faiq lebih menyimpan"],
+["Mengelak konflik",3,7,"Faiq menukar topik: “malas topik ni, nnti merajuk”"],
+["Humor dan suka bergurau",6,9,"Faiq ketawa dalam 8.9% mesej, Fatin 2.3%"],
+["Perancang dan teliti",8,6,"Fatin urus kenduri, Faiq buat nota"],
+["Sensitif pada rasa dihormati",9,9,"Dua-dua gaduh sebab rasa direndahkan"],
+["Memberi secara praktikal",6,8,"Faiq hantar, bayar dan bawa kereta"],
+["Mengkritik diri sendiri",8,5,"Fatin mengaku salah dan menghukum diri"],
+["Ingin tahu dan menyiasat",9,4,"Fatin bertanya tujuh kali lebih kerap"]
+];
+bars('traitm',TM);
+const TF=[
+["Penyiasat yang berfikir lantang","Soalan dalam 7.1% mesej dan 430 mesej melebihi 200 aksara. Fatin memproses perasaan dengan menulis dan bertanya."],
+["Perancang yang menanggung beban","Katering 600 orang, borang kariah, nota kerja, dan “kahwin” disebut 85 kali. Dia pegang kenduri hampir sendirian."],
+["Standard tinggi dan cepat nampak tak hormat","Senarai lapan sebab pada 24 Dis 2025 dan “ak nk proof of action”. Dia tahu apa yang dia mahu dan tak berselindung."],
+["Kritikan diri keras","“otak bodoh ak”, “ak mmg kurang ajar”. Dia mengaku salah tanpa dipaksa, tetapi bila terluka, cepat bertukar jadi menuduh."],
+["Dibentuk oleh keluarga","Ummi, adik dan cerita keluarga mewarnai jangkaannya, termasuk “jaga ko mcm jaga adik aku”."],
+["Meletup cepat, reda cepat","65 minit dari “pk cara nk cerai” ke “ak pegang janji ko” (26 Okt), dan kira-kira 2 jam pada 14 Ogos 2026."]
+];
+const TX=[
+["Pelawak dan penyejuk suasana","Ketawa dalam 8.9% mesej. Gurauan sering menyelamatkan suasana, kadang juga menghindari topik berat."],
+["Penyimpan perasaan","“Aku power bab menyimpan perasaan” (15 Feb 2025). Bila ditekan jadi sinis: “ok aku salah ko menang”."],
+["Menyayangi lewat tindakan","Hantar, bayar, bawa kereta, kerja lewat. “Kalau aku tak serius n tak sayangkan ko, takde aku buat bare minimum” (3 Apr 2026)."],
+["Maruah mudah tercalar dan insecure","“Diperbodohkan” (13 Jun 2025) dan “tkde respect langsung” (26 Okt 2026). Insecure tentang muka sejak sekolah (7 Feb 2025). Dia lebih terasa bila direndahkan daripada ditegur."],
+["Terbiasa diharap-harapkan orang","“Abg2 dan kakak aku byk step up untuk aku” dan “aku terbiasa mngharapkan org” (26 Okt 2026). Dia nampak corak itu dan kata sedang cuba berdiri sendiri, tapi Fatin masih nampak “slow2”."],
+["Pemujuk yang cepat minta maaf","“Sorry” dan “maaf” dalam 1.5% mesej, dan minta maaf dahulu pada 32 daripada 58 hari konflik tinggi, tetapi cepat mengaudit bila dituduh."]
+];
+const tc=a=>a.map(x=>`<div class="fl"><b>${x[0]}</b><p>${x[1]}</p></div>`).join('');
+$('trf').innerHTML=tc(TF);$('trm').innerHTML=tc(TX);
+const JM=[
+["Ansur-ansur tak lari dari kamera (7 hingga 8 Feb 2025)","Fatin: “im happy with ansur2 cuba utk ok”. Selepas itu: 19 Apr 2025 “saya tak suka bergambar”, 5 Jun 2025 tak nak selfie berdua, tapi 20 Okt 2025 “byk bergambar ye skarang” dan 21 Mac 2026 “bergambar semua ada”. Maju perlahan, bukan tamat.","mix"],
+["Kurang sukan lepas kerja dengan rakan pejabat, balik awal (26 Nov dan 24 Dis 2025)","“Janji tak main pingpong kalau awak nk saya hantarkan”, lalu “aku try mintak balik sblum pkul 5”. 30 Dis 2025 dia tak jadi main, 1 Mei 2026 “kalau diorang main aku auto masuk pejabat”, dan 5 Mei 2026 Fatin sendiri kata “mmg dah x pnah ada issue dah”. Ada lapse pada 20 Dis 2025, sebelum janji.","ok"],
+["Isytihar “dah berpunya” bila ditanya (16 dan 31 Jul 2025)","“kalau org tnya status, trus ckp yg aku dah unavailable”. 8 Sep 2025 beberapa rakan sepejabat sudah tahu dia berpunya.","ok"],
+["Berhenti harap Fatin yang fikir dan step up (3 Apr dan 26 Okt 2026)","“Aku terbiasa mngharapkan org, tapi aku cuba nak buat sendiri”, dengan contoh pasang bodykit sendiri dan buat nota. Tapi 3 Okt (menu dan tak update) dan 25 hingga 26 Okt (sampah) Fatin: “ko nk rely utk org pk kan”. Ujian terkini, belum lulus.","mix"],
+["Hantar dan balik terus kalau tiada plan (7 Jul 2025)","“kalau takde plan nak hntar ko aku trus balik”. Hal hantar masih jadi pemicu pada 2 Apr 2026, tapi dia terus hantar Fatin dalam banyak kes (contoh 2 Sep 2026).","mix"],
+["Ingat apa yang Fatin ok dan tak ok (14 Ogos 2025)","“InsyaAllah aku akan igt”. Isu serupa muncul lagi pada 24 Dis 2025.","mix"],
+["Tak abaikan post Fatin yang mention dia (14 Ogos 2026)","“Aku janji yg ni”. Tiada aduan baru pasal post selepas 16 Ogos dalam log, dan 15 Okt Fatin nampak dia like story. Tanda baik, masih singkat.","mix"],
+["Tak berahsia, terutama pasal perempuan lain (1 Jul 2026)","“Aku janji tak berahsia dgn ko”. 3 Okt dia kata “aku tkde benda pon nak smbunyikan dkt ko”, tapi isu “tak update” muncul lagi pada hari yang sama.","mix"],
+["Tak tinggalkan Fatin (26 Dis 2025)","“janji saya tkkan tinggalkan awak”. Dalam semua gaduh sampai 26 Okt 2026 dia yang menghulur tangan, bukan keluar. 26 Okt: “aku sekali pun tak pernah kluar dri mulut aku pasal ni”.","ok"],
+["Jimat tahun pertama kahwin, Fatin tak lapar (27 Dis 2025)","“aku janji la ko tak lapar n tak pakai duit ko”. Belum boleh diuji sebelum nikah.","unk"]
+];
+const JF=[
+["Kurangkan “garang” (12 Feb 2025)","“saya akn cuba belajar dan ubah sket garang saya”. Faiq sendiri akui dia dah jarang marah (14 Ogos 2026), tapi masih meletup Okt.","mix"],
+["Latih diri tak ambil hati (5 Mac 2025)","“I will try to train myself to take nothing personally”. Isu terasa hati muncul lagi 7 Jul 2025.","bad"],
+["Tak palau Faiq (23 Mac 2025)","Dia kata sudah cuba ikut kehendak Faiq iaitu tak palau. Faiq kata dipalau 2 hari pada 20 Mei 2025, dan dalam 50 jeda senyap, Fatin yang tak membalas dalam 29.","bad"],
+["Berkomunikasi lebih baik (11 Jul 2025)","“InShaaAllah saya akan cuba utk berkomunikasi dgn lebih baik, janjiii”. Ada baik sebelum 26 Okt 2026, tapi gaduh berat masih berulang.","mix"],
+["Ubah sifat mementingkan diri (10 Nov 2025)","“Saya akn try ubah prngai saya yg suka pntingkan diri sndiri ni”.","mix"],
+["Tak pernah give up pada Faiq (11 Nov 2025)","“I will never give up on you”. Diuji 14 Ogos dan 26 Okt 2026 bila perkataan tarik tunang dan cerai muncul, tapi dia kembali dalam 2 jam dan 65 minit.","mix"],
+["Tak sebut putus lagi (awal 2026)","Dia sendiri akui 3 Apr 2026 janji itu dilanggar. Muncul lagi 14 Ogos dan 26 Okt 2026.","bad"],
+["Tarik nafas dan kurang mengutuk (7 dan 22 Apr 2026)","“klau ada slightly inconvenience, ak akn cuba trik nafas dlu”. Diuji dengan isu sampah 26 Okt 2026 dan gagal.","bad"],
+["Belajar bertolak ansur dengan ketidakselesaan kecil (7 Apr 2026)","Dia terima janji timbal balik ini. Tiga gaduh berat dalam Ogos hingga Okt dicetus isu kecil (repost, menu, sampah).","bad"],
+["Hormat Faiq sebagai lelaki, berhenti ayat merendah (24 Dis 2025, 26 Okt 2026)","Dia sendiri akui “boy instead of man” kurang ajar dan minta maaf semula pada 26 Okt. Tapi 3 Okt “Ko nak sgt ke jd perempuan” dan 26 Okt “xnk jaga ko mcm adk ak” muncul lagi.","bad"]
+];
+const L={ok:`Ada tanda ditepati`,mix:`Separa`,bad:`Diulang atau dilanggar`,unk:`Tak dapat disahkan`};
+const jc=a=>a.map(x=>`<div class="fl"><b>${x[0]}</b><p>${x[1]}</p><span class="st ${x[2]}">${L[x[2]]}</span></div>`).join('');
+const JMX=[[55,3],[80,4],[85,3],[25,5],[55,3],[35,3],[65,3],[45,4],[90,5],[null,3]];
+const JFX=[[50,3],[30,3],[30,4],[55,3],[50,2],[65,5],[15,5],[30,3],[20,4],[20,5]];
+const JMN={3:`Dinilai semula Brandon: dulu “Separa”, tapi isu sama muncul semula pada 3 Okt dan 25 hingga 26 Okt, dan Fatin sebut ia dalam hampir setiap gaduh Okt. Piawai sama dikenakan pada janji Fatin yang samar.`,5:`Dinilai semula Brandon: isu serupa muncul 24 Dis 2025 tanpa bukti pembaikan.`,7:`Dinilai semula Brandon: dia sendiri mengaku salah bab tak update futsal pada 4 Okt 2026.`};
+const lv=s=>s===null?'unk':s>=70?'ok':s>=40?'mix':'bad';
+const wa=x=>{let a=0,b=0;x.forEach(v=>{if(v[0]!==null){a+=v[0]*v[1];b+=v[1]}});return Math.round(a/b)};
+const cnt=x=>{const c={ok:0,mix:0,bad:0,unk:0};x.forEach(v=>c[lv(v[0])]++);return c};
+const jc2=(a,x,n)=>a.map((t,i)=>{const s=x[i][0],w=x[i][1],k=lv(s);const col=k==='ok'?'var(--ok)':k==='mix'?'var(--warn)':'var(--bad)';return `<div class="fl"><b>${t[0]}</b><p>${t[1]}${n[i]?' '+n[i]:''}</p><span class="st ${k}">${L[k]}${s===null?'':' · '+s+'/100'}</span> <span class="st unk">Bobot ${w}/5</span>${s===null?'':`<div class="track" style="height:8px;margin-top:8px"><div data-w="${s}" style="background:${col}"></div></div>`}</div>`}).join('');
+const sm=(nama,x,col)=>{const c=cnt(x),s=wa(x);return `<div class="g"><div class="t"><span style="color:${col}">${nama}</span><span>${s}/100 (berpemberat)</span></div><div class="track"><div data-w="${s}" style="background:${col}"></div></div><div class="n">${c.ok} ditepati, ${c.mix} separa, ${c.bad} diulang atau dilanggar, ${c.unk} tak dapat disahkan</div></div>`};
+$('jsum').innerHTML=sm('Faiq',JMX,'var(--m)')+sm('Fatin',JFX,'var(--f)')+`<p class="sub" style="font-size:14px">Skor 0 hingga 100 ialah penilaian Brandon: 70 ke atas ditepati, 40 hingga 69 separa, bawah 40 diulang atau dilanggar. Bobot 1 hingga 5 ialah betapa besar janji itu pada kepercayaan dan berapa kerap ia mencetus gaduh. Purata berpemberat = jumlah (skor × bobot) dibahagi jumlah bobot, dan janji yang tak dapat disahkan tidak dikira. Piawai sama dikenakan pada dua-dua. Jangan baca ini sebagai siapa lebih baik: janji Fatin banyak berkaitan reaksi ketika terluka (tak sebut putus, tak merendah), yang memang paling susah dipegang.</p>`;
+$('jm').innerHTML=jc2(JM,JMX,JMN);$('jf').innerHTML=jc2(JF,JFX,{});
+const RQ=[
+["Feb 2025","Tulis esei jujur tentang insecure muka dan kamera, bagus. Tapi “ansur2” jadi pelan ansuran setahun, dan Fatin sempat tulis dia “fedup” (7 Feb)."],
+["Mac 2025","Takut Fatin merajuk, jadi elak topik dan simpul “lelaki semua sama”. Pengelakan konflik sejak minggu-minggu awal."],
+["Jun 2025","Periksa bin telefon untuk gambar yang Fatin padam. Mod penyiasat dalam gaduh kecil."],
+["Jul 2025","Fatin sebut putus sekali, Faiq terus tafsir “dah tawar hati”. Lepas tu senyap sampai 69 jam dan kata “aku nekad tknk jdi starter”."],
+["Jul hingga Sep 2025","Berat mulut nak kata “dah berpunya” di pejabat sampai Fatin terluka. Baru jelas pada September."],
+["Nov hingga Dis 2025","“Akhirnya aku salah ko btul”, kemudian sertai sukan lepas kerja walaupun Fatin dah beri signal, lepas tu “patut aku tak payah join”. Pandai mengaku, lambat berubah."],
+["Apr 2026","Tabur janji untuk pujuk, kemudian merungut janji dijadikan senjata. Janji murah, kecewa bila ditagih."],
+["Okt 2026","Tak update futsal, tanya menu, “ok aku salah ko menang”, hilang 16 jam, nafi marah pasal Fatin chat lelaki sambil jelas marah. Dan cakap kena “step up” bila sampah pun Fatin yang kena fikir."]
+];
+const RF=[
+["Jan 2025","Mengorat dulu (“Ni first time ok ak mgorat org”), lepas Faiq syak, dia balas “Oo so ko nak la sbenarnya g dating dgn aku”. Ajak, kemudian jadikan Faiq yang nak."],
+["Feb 2025","Seminggu selepas “sayang” sudah ada ultimatum: kalau tak hargai, dia tunggu orang lain yang hargai (7 Feb). Ancaman keluar bermula awal."],
+["Jun 2025","“ko sayang aku dengan banyak kata2 maaf… manipulation masked as good intention” (7 Jun). Faiq cuba pujuk, Fatin balas dengan label."],
+["Jul 2025","“klau nak putus bgtau ak xnk pkai dah cincin”. Kata cincin dan putus sudah jadi senjata berat 8 bulan selepas mula."],
+["Nov 2025","Maaf pakai “tapi”, kata “nonchalant tak sama dgn bodoh”, tuntut “proof of action” sambil maaf sendiri tiada bukti."],
+["Dis 2025","Senarai lapan sebab dan “esok dtg dgn sorry ko je”. Audit berformat memo."],
+["Apr hingga Okt 2026","Ugut BLOCK dan minta transfer balik duit dalam satu nafas (Apr), tarik tunang kerana repost (Ogos), 20 panggilan dan “pk cara nk cerai” kerana sampah (Okt). Kos reaksi makin besar, pemicu makin kecil."]
+];
+const ri=a=>a.map(x=>`<div class="ri"><span class="pr">${x[0]}</span><p>${x[1]}</p></div>`).join('');
+$('rq').innerHTML=ri(RQ);$('rf2').innerHTML=ri(RF);
+const EFM=[
+["Bunga hari jadi Fatin (23 Apr 2025)","Ambil sendiri di tempat lain dan rahsiakan sampai petang. Fatin kata itu bunga pertama daripada sesiapa dan dia terus “cair”."],
+["Teman dan tolong urusan kerja Fatin (21 Apr 2025)","Fatin tulis “smalam ko dah bnyak sgt2 dah tolong ak”."],
+["Hantar kek batik (12 Jul 2025)","Fatin “x sabar nk mkn kek batik”, dan kata Faiq “tak sia2” beli. Dia sempat rancang rakam Faiq datang hantar."],
+["Surprise lain yang Fatin sebut (28 Jul 2025)","“sayang la Faiq ni suka betul buat suprise”. Butiran apa yang diletak tak jelas dalam log."],
+["Jam Garmin dan bunga (23 Apr 2026)","Walaupun kata tak pandai surprise. Fatin kata jam itu jadi “lawaaa” dan akhirnya dia nak pakai."],
+["Hadiahkan benda yang Fatin suka (1 Ogos 2026)","Fatin tulis Faiq hadiahkan dia benda yang dia suka, dan dia mahu balas dengan cara sama."],
+["Muncul dan hantar balik tiba-tiba (29 Apr dan 1 Sep 2026)","“Surpriseeee!! Saya hantar awak balik rumah”, dan Fatin tulis “srs surprise gila tgok awk muncul”."]
+];
+const EFF=[
+["Ucapan tepat selepas tengah malam, dua tahun","12:05 pagi (2025) dan 12:03 pagi (2026), dengan “I love you so much”."],
+["Cuba buat “element of surprise” (2 Apr 2025)","Dia rancang buat kejutan untuk Faiq melalui IG, walaupun akhirnya kata “tkde element of surprise lgsg”."],
+["Hadiah hari jadi Faiq (Ogos 2025)","Beli beberapa hadiah termasuk pakaian yang dia janji. Faiq: “tenkiu sayangg atas hadiahnya”."],
+["Cuba rakam Faiq datang hantar kek (12 Jul 2025)","Dia siap rancang “record ko sweet dtg hntr kek”. Bukti dia simpan momen kecil."],
+["Belanja kek hari jadi Faiq (7 Ogos 2026)","“hrni saya nk belanja kek dah”. Dia juga sedar tak pandai surprise dan jujur kata begitu."],
+["Lukisan gambar kita untuk kenduri (12 Sep 2026)","Dia customise sendiri, tambah tarikh, tukar initial F dan F, dan hantar gambar kita untuk dilukis."]
+];
+$('efm').innerHTML=tc(EFM);$('eff').innerHTML=tc(EFF);
+const PL=[
+["Faiq",[
+["Tukar “ok aku salah ko menang” kepada ayat jujur","“Aku masih marah, bagi aku 30 minit, aku balas pukul 8.” Itu ganti sinis dan senyap 16 jam."],
+["Terima maaf dahulu, baru bahas","Bila Fatin minta maaf (25 Okt 8:27 malam), balas penerimaan dahulu. Hujah balas kemudian, sehari lepas."],
+["Janji kecil dengan tarikh","“Minggu ni aku pegang katering dan pos”, bukan “aku akan berubah”. Semak 5 minit setiap Ahad."],
+["Tutup pemicu yang Fatin dah sebut","Update bila ke futsal atau lewat, dan bila tanya menu bawa dua cadangan sendiri supaya tak rasa “disuap”."],
+["Cemburu: sebut terus, jangan nafikan","“Aku rasa tak selesa pasal ni, boleh bincang?” lebih sihat daripada “aku marah… tu pon bukan marah”."]]],
+["Fatin",[
+["Satu ayat maaf, titik","Buang “sorry tapi”. Isu lain dalam mesej berasingan selepas reda."],
+["Haramkan ayat merendah","“Adik aku”, “boy”, “bodoh”. Ganti dengan “aku perlukan Faiq buat X sebelum Jumaat”."],
+["Cerai, putus dan tarik tunang tak disebut semasa panas","Dia sendiri pernah berjanji. Kuatkan dengan: “aku perlu berhenti, aku balas pukul 8.”"],
+["Hadkan banjir","Tiga mesej atau satu panggilan, kemudian tunggu sejam. Esei tengah malam tulis di Notes, hantar versi 5 ayat."],
+["Minta tugas dengan nama dan tarikh","“Faiq ambil katering sebelum Khamis” lebih berkesan daripada “ko tak tolong”. Beban kenduri perlu dibahagi."]]],
+["Berdua",[
+["Time-out 30 minit yang sah","Cadangan Fatin sendiri sejak 15 Feb 2025. Siapa pun boleh guna, dan yang meminta mesti balas pada masa dijanjikan."],
+["Maaf bersih dan bukti tindakan","Satu perkara dibetulkan setiap minggu, ditulis dan disemak, bukan janji umum."],
+["Semakan 20 minit setiap minggu","Bila tenang, bukan masa penat. Tiga perkara baik, satu perkara perlu dibaiki."],
+["Keputusan besar tunggu 24 jam","Putus, tarik tunang, cerai, batal tidak dibincang hari yang sama dengan gaduh."],
+["Satu sesi pihak ketiga","Ustaz, ustazah atau kaunselor, kalau boleh sebelum nikah dan sebulan selepasnya. Dua tahun polanya sama, jadi tahu tak cukup."]]]
+];
+$('plan').innerHTML=PL.map(g=>`<h3>${g[0]}</h3>`+g[1].map(i=>`<div class="it"><b>${i[0]}</b><p>${i[1]}</p></div>`).join('')).join('');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const b=e.target;
+if(b.dataset.p){b.children[0].style.width=b.dataset.p+'%';b.children[1].style.width=(100-b.dataset.p)+'%'}
+if(b.dataset.w)b.style.width=b.dataset.w+'%';
+if(b.dataset.h)b.style.height=b.dataset.h+'%';
+io.unobserve(b)}),{threshold:.2});
+document.querySelectorAll('[data-p],[data-w],[data-h]').forEach(e=>io.observe(e));
+$('jjanji').checked=false;
+$('jjanji').addEventListener('change',e=>{$('janjiBody').hidden=!e.target.checked});
+</script>
+</body>
+</html>
